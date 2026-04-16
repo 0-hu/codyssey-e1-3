@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+*.pyo
+feedback.md
+generate_data.py
