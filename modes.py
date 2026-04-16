@@ -64,6 +64,15 @@ def run_mode_1():
     else:
         print(f"판정: {verdict}")
 
+    # E1-3 §4-9: 사용자 입력 모드 후 3×3 성능 분석 출력
+    print("\n#----------------------------------------")
+    print(f"# [4] 성능 분석 (평균/{REPEAT_COUNT}회)")
+    print("#----------------------------------------")
+    print(f"{'크기':<12}{'평균 시간(ms)':<16}{'연산 횟수(N²)'}")
+    print("-" * 42)
+    avg_sec = measure_performance(pattern, filter_a)
+    print(f"{'3×3':<12}{avg_sec * 1000:<16.3f}{3 * 3}")
+
 def run_mode_2():
     """모드 2: data.json에서 필터/패턴을 로드하여 일괄 MAC 판정을 수행한다."""
     try:
